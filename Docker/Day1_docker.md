@@ -28,6 +28,7 @@ docker ps -a         # all containers (including stopped)
 ```
 
 ## Images
+An image is the application that we want to run . It it all the binary and libiray source code that make the application . It is an object that contain os filesystem and the applicaton,It is the stopped container ,in terms of developer we can say that it is the class .
 
 - Pull an image from Docker Hub (or another registry):
 
@@ -50,6 +51,7 @@ docker rmi <image-id-or-name:tag>
 Note: `docker rm` is for removing containers; `docker rmi` removes images.
 
 ## Containers
+ A container is the an instance that image running as a process. Or we can say that it is a software bucket comprising everything that is necessary to run the software independently .Container have theire own file system process and network . Container are herieted from the image 
 
 - Run a container (detached):
 
@@ -106,6 +108,11 @@ sudo systemctl disable docker    # disable start on boot
 
 If you installed Docker without systemd privileges, use `sudo` where needed.
 
+
+
+
+# Other linux commands  (I should know)
+
 ## Shell & environment tips
 
 - Reload your shell configuration (e.g., after adding PATH changes):
@@ -121,7 +128,7 @@ sudo usermod -aG docker $USER
 # then log out and back in (or run: newgrp docker)
 ```
 
-## Example workflow (sequence)
+# Example workflow (sequence)
 
 1. Check Docker daemon is running:
 
@@ -161,9 +168,6 @@ docker rm demo-ubuntu
 - Add examples for building images with `Dockerfile` (docker build).
 - Explain networking, volumes and data persistence.
 
----
-
-If you'd like, I can also add a short section with `docker build` and a sample `Dockerfile`, or convert this into a printable cheat-sheet. Which would you prefer?
 
 
 
